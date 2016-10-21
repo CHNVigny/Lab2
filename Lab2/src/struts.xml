@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="com.vigny" namespace="/" extends="struts-default">
+		
+        <action name="DeleteBook" method="excute" class="com.vigny.delBook">
+        	<result name="success">/deleteSuccess.jsp</result>
+        	<result name="error">/error.jsp</result>  
+        </action> 
+        <action name="detectAuthor" class="com.vigny.detectAuthor" method="excute">
+        	<result name="success">/SearchAccordingToAuthor.jsp</result>
+        	<result name="error">/AuthorERROR.jsp</result>  
+        </action> 
+        <action name="addBook" class="com.vigny.addBook" method="addBook">
+        	<result name="success">/AddSuccess.jsp</result>
+        	<result name="error">/Error.jsp</result>
+        	<result name="input">/Error.jsp</result>  
+        </action> 
+        <action name="updateBook_setIsbn" class="com.vigny.updateBook" method="set">
+        	<result name="success">/UpdateBook.jsp</result>
+        	<result name="error">/Error.jsp</result>  
+        </action> 
+        <action name="updateBook" class="com.vigny.updateBook" method="update">
+        	<result name="success">/UpdateSuccess.jsp</result>
+        	<result name="error">/Error.jsp</result>  
+        </action> 
+        <action name="detectBook" class="com.vigny.detectBook" method="excute">
+        	<result name="success">/Allbooks.jsp</result>
+        	<result name="error">/AllBooksError.jsp</result>  
+        </action> 
+        
+    </package>
+    <constant name="structs.action.extension" value=""></constant>      
+</struts>    
